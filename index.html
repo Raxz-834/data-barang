@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendataan Barang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pendataan Barang</h1>
+        <div class="form">
+            <div class="form-group">
+                <label for="keterangan">Keterangan:</label>
+                <input type="text" id="keterangan" placeholder="Masukkan keterangan">
+            </div>
+            <div class="form-group">
+                <label for="nominalMasuk">Nominal Masuk:</label>
+                <input type="text" id="nominalMasuk" placeholder="Masukkan nominal masuk" oninput="formatNominal(this)">
+            </div>
+            <div class="form-group">
+                <label for="nominalKeluar">Nominal Keluar:</label>
+                <input type="text" id="nominalKeluar" placeholder="Masukkan nominal keluar" oninput="formatNominal(this)">
+            </div>
+            <button class="btn-submit" onclick="tambahData()">Submit</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Keterangan</th>
+                    <th>Nominal Masuk</th>
+                    <th>Nominal Keluar</th>
+                    <th>Ceklis</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody id="data-list">
+            </tbody>
+        </table>
+        <div class="total-wrapper">
+            Total Dana: <span id="total-dana">0</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
